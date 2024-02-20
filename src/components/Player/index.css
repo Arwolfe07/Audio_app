@@ -1,0 +1,134 @@
+.player-section {
+  flex: 2;
+  height: 80vh;
+  margin-block: auto;
+  border: 1px solid #00000033;
+  border-radius: 12px;
+  box-shadow: 20px 20px;
+  margin-right: 12px;
+  background: #0964b0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-img {
+  border-radius: 12px;
+  height: 20rem;
+  width: 80%;
+  margin-top: 2rem;
+  margin-inline: auto;
+  background-image: url("../../assets/bgImg.jpg");
+  background-size: cover;
+}
+
+.player-controls {
+  margin-block: 32px;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.player-controls svg {
+  font-size: 40px;
+  color: white;
+}
+
+.player-controls svg:hover {
+  cursor: pointer;
+}
+
+.player-progress {
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player-progress input {
+  --progress: 100%;
+  -webkit-appearance: none;
+  position: relative;
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-inline: 12px;
+}
+
+.player-progress input::-moz-range-track {
+  margin-inline: 12px;
+  position: relative;
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.player-progress span {
+  color: white;
+  font-weight: 600;
+}
+.player-progress input::before {
+  content: "";
+  height: 2px;
+  background: #fff;
+  width: var(--progress);
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.player-progress input::-moz-range-progress {
+  background: #fff;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  height: 2px;
+}
+
+.player-progress input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+.player-progress input:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+/* slider thumb - firefox */
+.player-progress input::-moz-range-thumb {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  border: transparent;
+  position: relative;
+}
+/* dragging thumb - firefox */
+.player-progress input:active::-moz-range-thumb {
+  transform: scale(1.2);
+}
+
+@media (max-width: 1024px) {
+  .player-section {
+    width: 80vh;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 468px) {
+  .player-section {
+    width: 90%;
+    max-height: 60vh;
+    margin-top: 16px;
+  }
+}
